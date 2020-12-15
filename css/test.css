@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px; } }
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px; } }
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px; } }
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px; } }
+body {
+  background-color: #d9e4f5;
+  touch-action: manipulation; }
+
+a {
+  text-decoration: none; }
+
+button {
+  outline: none;
+  cursor: pointer;
+  border: none; }
+
+.todo {
+  width: 100%;
+  overflow: hidden; }
+  .todo__clearAll {
+    margin-bottom: 30px;
+    max-width: 508px;
+    margin-left: auto;
+    margin-right: auto; }
+    .todo__clearAll-btn {
+      color: #2b2a2a;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      background-color: aquamarine;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 18px;
+      width: 100%;
+      text-align: center;
+      transition: all ease-in-out 0.2s; }
+      .todo__clearAll-btn:hover {
+        background-color: #79e0be; }
+      .todo__clearAll-btn:focus {
+        outline: 0;
+        background-color: #79e0be;
+        box-shadow: 0 0 0 0.2rem #636363; }
+  .todo__title {
+    padding-top: 40px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    font-weight: bold; }
+  .todo__group {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 100%;
+    justify-content: center; }
+  .todo__warning {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #ee1717;
+    text-align: center;
+    flex-basis: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease-in-out 0.2s; }
+    .todo__warning.add {
+      opacity: 1;
+      visibility: visible; }
+  .todo__input {
+    border: none;
+    outline: none;
+    padding: 8px 10px;
+    width: 461px;
+    color: #1f1f1f; }
+    .todo__input::placeholder {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      color: #ced4da; }
+  .todo__btn {
+    cursor: pointer;
+    background-color: aquamarine;
+    padding: 4px 15px;
+    font-size: 20px;
+    transition: all ease-in-out 0.3s; }
+    .todo__btn:hover {
+      background-color: #79e0be; }
+  .todo__list {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-width: 508px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    height: 450px;
+    background-color: white; }
+    .todo__list::-webkit-scrollbar {
+      width: 5px;
+      cursor: pointer; }
+    .todo__list::-webkit-scrollbar-track {
+      background: #cfcfcf; }
+    .todo__list::-webkit-scrollbar-thumb {
+      background: #888;
+      cursor: pointer; }
+    .todo__list::-webkit-scrollbar-thumb:hover {
+      background: #666666; }
+  .todo__note {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    max-width: 508px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: #c2c2c2;
+    font-weight: 400;
+    text-align: center;
+    background-color: #5c5c5c; }
+  .todo__thing {
+    margin-top: 5px;
+    border-bottom: 1px solid;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    font-family: 'Open Sans', sans-serif;
+    color: #272727;
+    padding: 10px 5px;
+    animation-name: fade;
+    animation-duration: 0.5s; }
+@keyframes fade {
+  from {
+    opacity: 0.3;
+    transform: translateY(-20px); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+    .todo__thing-name {
+      word-wrap: break-word;
+      max-width: 370px;
+      font-size: 15px; }
+    .todo__thing-remove {
+      background-color: transparent;
+      margin-right: 5px;
+      color: #272727;
+      cursor: pointer;
+      transition: all ease-in-out 0.2s; }
+      .todo__thing-remove:hover {
+        color: #969696; }
+      .todo__thing-remove .fa-trash {
+        pointer-events: none; }
+    .todo__thing.remove {
+      transition: all ease-in-out 0.2s;
+      opacity: 0.1; }
+
+@media screen and (max-width: 448px) {
+  .todo__thing {
+    width: 85vw; }
+    .todo__thing-name {
+      word-wrap: break-word;
+      max-width: 75%;
+      font-size: 15px; } }
+
+/*# sourceMappingURL=styles.css.map */
