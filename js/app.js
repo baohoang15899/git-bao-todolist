@@ -105,7 +105,7 @@ let data = {
 //--------------------------App function--------------------------
 
 function addThing(){
-    if (input.value === ""){
+    if (input.value === "" || input.value.trim() === ""){
         warning.innerText="Your input is empty !"
         warning.classList.add("add")
         input.addEventListener("input",()=>{
